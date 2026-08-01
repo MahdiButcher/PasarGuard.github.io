@@ -48,6 +48,18 @@ export const communityCategories: CommunityCategory[] = [
         name: 'PGClockPlus',
         description: 'Extended PGClock subscription page template.',
       },
+      {
+        repo: 'MatinDehghanian/CNsubscribtion',
+        name: 'CNsubscribtion',
+        description:
+          'Custom subscription page template for PasarGuard with multi-panel support.',
+      },
+      {
+        repo: 'MatinDehghanian/LightWaySub',
+        name: 'LightWaySub',
+        description:
+          'Lightweight and fast subscription page template built with React, shadcn/ui, and Tailwind CSS.',
+      },
     ],
   },
   {
