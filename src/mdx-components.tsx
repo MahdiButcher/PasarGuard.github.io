@@ -4,6 +4,7 @@ import { Step, Steps } from 'fumadocs-ui/components/steps';
 import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 import type { MDXComponents } from 'mdx/types';
 import { LocalizedCard } from '@/components/LocalizedCard';
+import { CommunityProjects } from '@/components/CommunityProjects';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import {
   Info,
@@ -178,6 +179,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Steps,
     Cards,
     Card: LocalizedCard,
+    CommunityProjects,
     Alert,
     Field,
     ImageZoom,
