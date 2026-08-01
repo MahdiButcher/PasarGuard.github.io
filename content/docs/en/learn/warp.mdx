@@ -137,6 +137,20 @@ First, add an outbound like the example and place the `wgcf-profile.conf` file i
 If you want all traffic to pass through Warp by default, place this Outbound first and you don't need to perform the next step.
 </Callout>
 
+<Callout type="info">
+  **Docker Configuration for Xray WireGuard Outbound:**
+  If you are running PasarGuard Node using Docker, add the following lines to your `docker-compose.yml` file under the service definition for WireGuard outbound to function properly:
+
+  ```yaml
+      devices:
+        - /dev/net/tun:/dev/net/tun
+      security_opt:
+        - seccomp=unconfined
+        - systempaths=unconfined
+        - apparmor=unconfined
+  ```
+</Callout>
+
 ### Method 2: Using Wireguard Core
 
 First, install the Wireguard prerequisites on the server:

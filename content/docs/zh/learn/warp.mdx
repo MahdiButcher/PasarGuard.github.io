@@ -135,6 +135,20 @@ wgcf generate
 如果您希望默认情况下所有流量都通过 Warp，请将此 Outbound 放在首位，您无需执行下一步。
 </Callout>
 
+<Callout type="info">
+  **Xray WireGuard Outbound 的 Docker 配置：**
+  如果您使用 Docker 运行 PasarGuard Node，请在 `docker-compose.yml` 文件中添加以下内容，以使 WireGuard outbound 正常工作：
+
+  ```yaml
+      devices:
+        - /dev/net/tun:/dev/net/tun
+      security_opt:
+        - seccomp=unconfined
+        - systempaths=unconfined
+        - apparmor=unconfined
+  ```
+</Callout>
+
 ### 方法 2：使用 Wireguard Core
 
 首先，在服务器上安装 Wireguard 先决条件：
